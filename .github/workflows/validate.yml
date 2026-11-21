@@ -1,0 +1,45 @@
+name: Engineering verification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      native_vsp:
+        description: Run the official Linux OpenVSP/VSPAERO reference-wing case
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  python:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python scripts/bootstrap.py
+      - run: python scripts/run.py test -q
+      - run: python scripts/run.py analyse
+      - run: python scripts/run.py notebook
+      - uses: actions/upload-artifact@v4
+        with:
+          name: engineering-python-${{ matrix.python }}
+          path: reports/runs/
+  native:
+    if: github.event_name == 'workflow_dispatch' && inputs.native_vsp
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/bootstrap.py --openvsp-linux
+      - run: python scripts/run.py vsp
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vspaero-reference-wing
+          path: reports/runs/vspaero/

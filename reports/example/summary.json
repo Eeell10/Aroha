@@ -1,0 +1,127 @@
+{
+  "status": "ILLUSTRATIVE_CONCEPTUAL_ANALYSIS_NOT_FLIGHT_VALIDATION",
+  "utc": "2026-11-21T07:15:52.171955+00:00",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.12.0",
+    "matplotlib": "3.9.4",
+    "ADRpy": "0.2.6"
+  },
+  "input_sha256": "667d7dbeb83f6ae94ac186402750c9a11ab981ad87cc7aaf543962aa3d78d15b",
+  "input": {
+    "name": "ILLUSTRATIVE ONLY \u2014 three-motor VTOL",
+    "data_status": "synthetic_example_not_actual_aircraft",
+    "mass_kg": 4.0,
+    "wing_area_m2": 0.65,
+    "span_m": 2.0,
+    "cl_max": 1.2,
+    "cd0": 0.04,
+    "oswald_e": 0.75,
+    "altitude_m": 0.0,
+    "isa_offset_k": 0.0,
+    "cruise_speed_mps": 20.0,
+    "climb_rate_mps": 2.0,
+    "turn_load_factor": 1.5,
+    "stall_limit_mps": 12.0,
+    "propulsive_efficiency": 0.65,
+    "motor_esc_efficiency": 0.85,
+    "hover_figure_of_merit": 0.65,
+    "avionics_power_w": 12.0,
+    "battery_nominal_wh": 220.0,
+    "battery_usable_fraction": 0.8,
+    "battery_specific_energy_whkg": 180.0,
+    "lift_application_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotors": [
+      {
+        "name": "front_left",
+        "position_m": [
+          0.3,
+          -0.45,
+          0.0
+        ],
+        "diameter_m": 0.38,
+        "max_thrust_n": 22.0,
+        "spin_sign": 1,
+        "reaction_torque_per_thrust_m": 0.02,
+        "tilts": true
+      },
+      {
+        "name": "front_right",
+        "position_m": [
+          0.3,
+          0.45,
+          0.0
+        ],
+        "diameter_m": 0.38,
+        "max_thrust_n": 22.0,
+        "spin_sign": -1,
+        "reaction_torque_per_thrust_m": 0.02,
+        "tilts": true
+      },
+      {
+        "name": "rear",
+        "position_m": [
+          -0.6,
+          0.0,
+          0.0
+        ],
+        "diameter_m": 0.38,
+        "max_thrust_n": 22.0,
+        "spin_sign": 1,
+        "reaction_torque_per_thrust_m": 0.02,
+        "tilts": false
+      }
+    ],
+    "mission": {
+      "hover_total_s": 90.0,
+      "transition_total_s": 40.0,
+      "transition_power_factor": 1.2,
+      "cruise_s": 900.0
+    },
+    "assumptions": [
+      "Every numerical input is an illustrative assumption; no aircraft measurements were supplied.",
+      "Two front rotors tilt forward; rear rotor remains vertical. This is a configurable example, not a confirmed AROHA architecture.",
+      "Coordinates: x forward, y right, z down; all locations relative to CG; tilt 0 degrees vertical, 90 degrees forward.",
+      "Constant thrust limits must be replaced by measured voltage/airspeed-dependent propulsion maps.",
+      "Parabolic drag polar, unblown wing, constant CLmax; no stall, separation or rotor-wing interference solution.",
+      "Transition screen balances Fx, upward Fz, roll and pitch from thrust arms and lift; rotor reaction torque, yaw and aerodynamic pitching moments omitted there.",
+      "Hover diagnostic includes a separate assumed reaction-torque yaw residual; it does not solve yaw control.",
+      "Transition mission energy is a user allowance (factor times hover power), not a dynamic simulation.",
+      "Mass is all-up mass including battery; battery sizing does not automatically close aircraft mass."
+    ]
+  },
+  "density_kgm3": 1.2249998682209657,
+  "weight_n": 39.2266,
+  "stall_speed_mps": 9.061289562727483,
+  "hover": {
+    "thrust_n": [
+      13.075533333333334,
+      13.07553333333333,
+      13.075533333333334
+    ],
+    "within_thrust_limits": true,
+    "force_moment_residual": [
+      0.0,
+      1.6550708951494167e-15,
+      -1.1307503082017926e-15
+    ],
+    "yaw_residual_nm": 0.2615106666666667,
+    "four_channel_rank": 3,
+    "independent_four_channel_control": false
+  },
+  "hover_electrical_power_w": 499.04213498258036,
+  "cruise_electrical_power_w": 266.7106864371641,
+  "mission_energy_wh": 85.8076201169566,
+  "usable_battery_wh": 176.0,
+  "mission_energy_within_budget": true,
+  "minimum_battery_mass_kg_energy_only": 0.5958862508121986,
+  "adrpy_reconstruction_max_abs_error": 5.551115123125783e-17,
+  "transition_points_with_reduced_balance": 230,
+  "transition_grid_points": 399,
+  "flight_feasibility": "NOT_ASSESSED"
+}

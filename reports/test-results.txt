@@ -1,0 +1,40 @@
+..................                                                       [100%]
+=============================== warnings summary ===============================
+tests/test_physics.py::test_transition_limiting_cases
+  <repository>/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+  <repository>/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+tests/test_physics.py::test_transition_limiting_cases
+  <repository>/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+tests/test_physics.py::test_transition_limiting_cases
+  <repository>/.venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+tests/test_physics.py::test_adrpy_atmosphere_and_equation_crosscheck
+tests/test_physics.py::test_adrpy_atmosphere_and_equation_crosscheck
+  <repository>/.venv/lib/python3.12/site-packages/ADRpy/constraintanalysis.py:726: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+    beta_00 = math.sqrt(1 - machsub ** 2)
+
+tests/test_physics.py::test_adrpy_atmosphere_and_equation_crosscheck
+tests/test_physics.py::test_adrpy_atmosphere_and_equation_crosscheck
+  <repository>/.venv/lib/python3.12/site-packages/ADRpy/constraintanalysis.py:727: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+    beta_le = math.sqrt(1 - (machsub * math.cos(sweep_le_rad)) ** 2)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+18 passed, 18 warnings in 2.12s

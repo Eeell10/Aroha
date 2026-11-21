@@ -1,0 +1,41 @@
+{
+  "name": "ILLUSTRATIVE ONLY — three-motor VTOL",
+  "data_status": "synthetic_example_not_actual_aircraft",
+  "mass_kg": 4.0,
+  "wing_area_m2": 0.65,
+  "span_m": 2.0,
+  "cl_max": 1.2,
+  "cd0": 0.04,
+  "oswald_e": 0.75,
+  "altitude_m": 0.0,
+  "isa_offset_k": 0.0,
+  "cruise_speed_mps": 20.0,
+  "climb_rate_mps": 2.0,
+  "turn_load_factor": 1.5,
+  "stall_limit_mps": 12.0,
+  "propulsive_efficiency": 0.65,
+  "motor_esc_efficiency": 0.85,
+  "hover_figure_of_merit": 0.65,
+  "avionics_power_w": 12.0,
+  "battery_nominal_wh": 220.0,
+  "battery_usable_fraction": 0.8,
+  "battery_specific_energy_whkg": 180.0,
+  "lift_application_m": [0.0, 0.0, 0.0],
+  "rotors": [
+    {"name": "front_left", "position_m": [0.30, -0.45, 0.0], "diameter_m": 0.38, "max_thrust_n": 22.0, "spin_sign": 1, "reaction_torque_per_thrust_m": 0.02, "tilts": true},
+    {"name": "front_right", "position_m": [0.30, 0.45, 0.0], "diameter_m": 0.38, "max_thrust_n": 22.0, "spin_sign": -1, "reaction_torque_per_thrust_m": 0.02, "tilts": true},
+    {"name": "rear", "position_m": [-0.60, 0.0, 0.0], "diameter_m": 0.38, "max_thrust_n": 22.0, "spin_sign": 1, "reaction_torque_per_thrust_m": 0.02, "tilts": false}
+  ],
+  "mission": {"hover_total_s": 90.0, "transition_total_s": 40.0, "transition_power_factor": 1.2, "cruise_s": 900.0},
+  "assumptions": [
+    "Every numerical input is an illustrative assumption; no aircraft measurements were supplied.",
+    "Two front rotors tilt forward; rear rotor remains vertical. This is a configurable example, not a confirmed AROHA architecture.",
+    "Coordinates: x forward, y right, z down; all locations relative to CG; tilt 0 degrees vertical, 90 degrees forward.",
+    "Constant thrust limits must be replaced by measured voltage/airspeed-dependent propulsion maps.",
+    "Parabolic drag polar, unblown wing, constant CLmax; no stall, separation or rotor-wing interference solution.",
+    "Transition screen balances Fx, upward Fz, roll and pitch from thrust arms and lift; rotor reaction torque, yaw and aerodynamic pitching moments omitted there.",
+    "Hover diagnostic includes a separate assumed reaction-torque yaw residual; it does not solve yaw control.",
+    "Transition mission energy is a user allowance (factor times hover power), not a dynamic simulation.",
+    "Mass is all-up mass including battery; battery sizing does not automatically close aircraft mass."
+  ]
+}

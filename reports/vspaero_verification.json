@@ -1,0 +1,73 @@
+{
+  "openvsp_version": "OpenVSP 3.56.0",
+  "case": "isolated rectangular NACA0012 wing, S=0.65 m\u00b2, b=2 m",
+  "status": "SMOKE_AND_SANITY_ONLY",
+  "rows": [
+    {
+      "nspan": 8,
+      "nchord": 13,
+      "Alpha": -4.0,
+      "CLtot": -0.306822978492,
+      "CDtot": 0.015172592865
+    },
+    {
+      "nspan": 8,
+      "nchord": 13,
+      "Alpha": 0.0,
+      "CLtot": 0.0,
+      "CDtot": 0.009902350988
+    },
+    {
+      "nspan": 8,
+      "nchord": 13,
+      "Alpha": 4.0,
+      "CLtot": 0.306820506698,
+      "CDtot": 0.015172571988
+    },
+    {
+      "nspan": 12,
+      "nchord": 17,
+      "Alpha": -4.0,
+      "CLtot": -0.301783865134,
+      "CDtot": 0.015168629081
+    },
+    {
+      "nspan": 12,
+      "nchord": 17,
+      "Alpha": 0.0,
+      "CLtot": 0.0,
+      "CDtot": 0.009902350988
+    },
+    {
+      "nspan": 12,
+      "nchord": 17,
+      "Alpha": 4.0,
+      "CLtot": 0.30179617488,
+      "CDtot": 0.01516792282
+    },
+    {
+      "nspan": 20,
+      "nchord": 25,
+      "Alpha": -4.0,
+      "CLtot": -0.298409762478,
+      "CDtot": 0.015217086826
+    },
+    {
+      "nspan": 20,
+      "nchord": 25,
+      "Alpha": 0.0,
+      "CLtot": 0.0,
+      "CDtot": 0.009902350988
+    },
+    {
+      "nspan": 20,
+      "nchord": 25,
+      "Alpha": 4.0,
+      "CLtot": 0.298401083784,
+      "CDtot": 0.015217672418
+    }
+  ],
+  "last_two_mesh_relative_cl_change": 0.011377609802709585,
+  "starter_mesh_gate_5_percent_passed": true,
+  "limits": "No experimental comparison; 5 wake iterations; no viscous stall, rotor interference or actual aircraft geometry."
+}

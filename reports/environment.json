@@ -1,0 +1,29 @@
+{
+  "python": "3.12.14",
+  "checks": {
+    "ADRpy": {
+      "ok": true,
+      "details": {
+        "version": "0.2.6",
+        "sea_level_density_kgm3": 1.2249998682209657
+      }
+    },
+    "SUAVE": {
+      "ok": true,
+      "details": {
+        "version": "2.5.2",
+        "sea_level_density_kgm3": 1.2250000002007604
+      }
+    },
+    "OpenVSP_VSPAERO": {
+      "ok": true,
+      "details": {
+        "version": "OpenVSP 3.56.0",
+        "solver_located": true,
+        "note": "Actual solver execution is checked by vspaero_smoke.py"
+      }
+    }
+  },
+  "scope": "all backends",
+  "all_requested_checks_passed": true
+}
